@@ -193,7 +193,7 @@ vim.keymap.set('n', '<C-k>', '<C-w><C-k>', { desc = 'Move focus to the upper win
 -- Git keymaps
 vim.keymap.set('n', '<leader>gd', ':Gitsigns diffthis<CR>', { desc = 'Git diff' })
 vim.keymap.set('n', '<leader>gp', ':Gitsigns preview_hunk<CR>', { desc = 'Git preview hunk' })
-vim.keymap.set('n', '<leader>gl', ':Gitsigns diffthis<CR>', { desc = 'Toggle Git line highlight' })
+vim.keymap.set('n', '<leader>gl', ':Gitsigns toggle_linehl<CR>', { desc = 'Toggle Git line highlight' })
 
 -- Navigation
 vim.keymap.set('n', ']g', ':Gitsigns next_hunk<CR>', { desc = 'Next git hunk' })
@@ -300,7 +300,8 @@ require('lazy').setup({
         { '<leader>s', group = '[S]earch' },
         { '<leader>w', group = '[W]orkspace' },
         { '<leader>t', group = '[T]oggle' },
-        { '<leader>h', group = 'Git [H]unk', mode = { 'n', 'v' } },
+        -- { '<leader>h', group = 'Git [H]unk', mode = { 'n', 'v' } },
+        { '<leader>g', group = '[G]it Functions' },
       }
     end,
   },
